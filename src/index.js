@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Step 3: Get form data - access input directly
     const taskInputElement = document.getElementById("new-task-description");
     const taskInput = taskInputElement.value;
-    console.log("Task input value:", taskInput);
+    console.log("Task inputvalue:", taskInput);
 
     // Validate input is not empty
     if (taskInput.trim() === "") {
-      console.log("Empty task input - not adding to list");
+      console.log("Empty input");
       return;
     }
 
@@ -43,15 +43,15 @@ function buildToDo(task) {
 
   // Create new list item
   const li = document.createElement("li");
-  console.log("Created new li element");
+  console.log("Created new list li element");
 
   // Add text
   li.textContent = task;
-  console.log("Added text content to li:", task);
+  console.log("Added text content to list li:", task);
 
   // Append to list
   taskList.appendChild(li);
-  console.log("Task added to list successfully!");
+  console.log("Task added successfully to list!");
 }
 
 // Export for testing (only in Node.js environment)
